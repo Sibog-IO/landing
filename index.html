@@ -8,7 +8,7 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
         :root {
@@ -32,6 +32,7 @@
             color: var(--text-color);
             line-height: 1.6;
             overflow-x: hidden;
+            scroll-behavior: smooth;
         }
 
         /* --- Utilities --- */
@@ -46,7 +47,7 @@
 
         /* --- Header --- */
         header {
-            padding: 20px 0;
+            padding: 15px 0;
             position: fixed;
             width: 100%;
             top: 0;
@@ -63,11 +64,25 @@
         }
 
         .logo {
-            font-size: 1.5rem;
-            font-weight: 800;
-            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .logo img {
+            height: 35px;
+            width: auto;
+            display: block;
+        }
+
+        .logo-text {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1rem;
+            letter-spacing: 2px;
+            margin-top: 4px;
+            color: var(--text-color);
+            font-weight: 700;
         }
 
         .nav-items {
@@ -76,11 +91,27 @@
             gap: 30px;
         }
 
+        .nav-links {
+            display: flex;
+            gap: 15px;
+        }
+
         .nav-links a {
             font-weight: 500;
             font-size: 0.9rem;
+            padding: 8px 18px;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.05);
+            background: rgba(255,255,255,0.02);
+            transition: all 0.3s ease;
         }
-        .nav-links a:hover { color: var(--primary-color); }
+        .nav-links a:hover { 
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+            background: rgba(59, 130, 246, 0.1);
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.2);
+            transform: translateY(-2px);
+        }
 
         /* Language Switcher */
         .lang-switch {
@@ -102,6 +133,7 @@
             justify-content: center;
             text-align: center;
             position: relative;
+            padding-top: 80px; /* Offset for fixed header */
         }
 
         /* Background Glow */
@@ -179,24 +211,7 @@
         .card p { color: #94a3b8; font-size: 0.95rem; }
         .icon { font-size: 2rem; margin-bottom: 20px; display: block; }
 
-        /* --- Footer --- */
-        footer {
-            padding: 50px 0;
-            border-top: 1px solid var(--glass-border);
-            text-align: center;
-            color: #94a3b8;
-            font-size: 0.9rem;
-        }
-        .socials { margin-bottom: 20px; }
-        .socials a { margin: 0 10px; font-size: 1.2rem; }
-
-        /* --- Added Styles --- */
-        .logo img {
-            height: 40px;
-            width: auto;
-            display: block;
-        }
-
+        /* --- Contact Form --- */
         .contact-form {
             max-width: 500px;
             margin: 0 auto 40px;
@@ -230,6 +245,17 @@
             background: var(--accent-color);
         }
 
+        /* --- Footer --- */
+        footer {
+            padding: 50px 0;
+            border-top: 1px solid var(--glass-border);
+            text-align: center;
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+        .socials { margin-bottom: 20px; }
+        .socials a { margin: 0 10px; font-size: 1.2rem; }
+
         /* --- Mobile --- */
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.5rem; }
@@ -242,8 +268,9 @@
     <header>
         <div class="container">
             <nav>
-                <div class="logo">
+                <div class="logo" onclick="window.scrollTo(0,0)">
                     <img src="images/logo.svg" alt="Sibog.IO">
+                    <span class="logo-text">SIBOG.IO</span>
                 </div>
                 <div class="nav-items">
                     <div class="nav-links">
@@ -265,7 +292,7 @@
         <div class="container">
             <h1><span data-i18n="hero_title">We Build</span> <br><span id="typewriter" class="typewriter-text"></span></h1>
             <p data-i18n="hero_subtitle">Maximizing your business results through scalable Technology and Artificial Intelligence.</p>
-            <a href="mailto:vinicius@sibog.io" class="cta-btn" data-i18n="cta_button">Let's Talk</a>
+            <a href="#contact" class="cta-btn" data-i18n="cta_button">Let's Talk</a>
         </div>
     </section>
 
@@ -298,15 +325,40 @@
         </div>
     </section>
 
-    <footer id="contact">
+    <section id="mission" class="services">
         <div class="container">
-            <form action="mailto:ti.sibog.io@gmail.com" method="post" enctype="text/plain" class="contact-form">
-                <input type="text" name="name" placeholder="Name" required>
-                <input type="email" name="email" placeholder="Email" required>
-                <textarea name="message" placeholder="Message" rows="4" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
+            <div class="section-title">
+                <h2 data-i18n="mission_title">Our Mission</h2>
+                <p data-i18n="mission_subtitle">Driven by purpose, defined by results.</p>
+            </div>
+            
+            <div class="card" style="text-align: center; max-width: 900px; margin: 0 auto; background: linear-gradient(145deg, rgba(30, 41, 59, 0.7), rgba(15, 23, 42, 0.9));">
+                <span class="icon" style="font-size: 3rem;">🎯</span>
+                <p data-i18n="mission_text" style="font-size: 1.2rem; line-height: 1.8; color: #e2e8f0;">
+                    To democratize access to high-end software engineering and artificial intelligence. We believe that scalable technology shouldn't be a luxury, but a standard for businesses aiming to lead their markets.
+                </p>
+            </div>
+        </div>
+    </section>
 
+    <section id="contact" class="services">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-i18n="contact_title">Get in Touch</h2>
+                <p data-i18n="contact_subtitle">Have a project in mind? Let's build it together.</p>
+            </div>
+            
+            <form action="mailto:ti.sibog.io@gmail.com" method="post" enctype="text/plain" class="contact-form">
+                <input type="text" name="name" placeholder="Name" data-i18n="form_name_placeholder" required>
+                <input type="email" name="email" placeholder="Email" data-i18n="form_email_placeholder" required>
+                <textarea name="message" placeholder="Message" rows="4" data-i18n="form_message_placeholder" required></textarea>
+                <button type="submit" data-i18n="form_submit_btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
             <div class="socials">
                 <a href="https://www.linkedin.com/company/sibog-io/about/" target="_blank">LinkedIn</a>
                 <a href="https://www.instagram.com/sibog.io/" target="_blank">Instagram</a>
@@ -335,6 +387,15 @@
                 card2_desc: "Integrating AI to automate workflows, analyze data, and give your business a competitive edge.",
                 card3_title: "Digital Strategy",
                 card3_desc: "Our mission is to apply our technical experience to ensure your technology drives actual business revenue.",
+                mission_title: "Our Mission",
+                mission_subtitle: "Driven by purpose, defined by results.",
+                mission_text: "To democratize access to high-end software engineering and artificial intelligence. We believe that scalable technology shouldn't be a luxury, but a standard for businesses aiming to lead their markets.",
+                contact_title: "Get in Touch",
+                contact_subtitle: "Have a project in mind? Let's build it together.",
+                form_name_placeholder: "Name",
+                form_email_placeholder: "Email",
+                form_message_placeholder: "Message",
+                form_submit_btn: "Send Message",
                 footer_rights: "All rights reserved.",
                 footer_dev: "Developed with ❤️ by Vinícius.",
                 typewriter_phrases: ["the Future.", "Intelligence.", "Solutions.", "Growth."]
@@ -354,6 +415,15 @@
                 card2_desc: "Integrando IA para automatizar fluxos de trabalho, analisar dados e dar vantagem competitiva ao seu negócio.",
                 card3_title: "Estratégia Digital",
                 card3_desc: "Nossa missão é aplicar experiência técnica para garantir que a tecnologia gere receita real.",
+                mission_title: "Nossa Missão",
+                mission_subtitle: "Movidos por propósito, definidos por resultados.",
+                mission_text: "Democratizar o acesso à engenharia de software de alto nível e inteligência artificial. Acreditamos que tecnologia escalável não deve ser um luxo, mas um padrão para empresas que almejam liderar seus mercados.",
+                contact_title: "Entre em Contato",
+                contact_subtitle: "Tem um projeto em mente? Vamos construí-lo juntos.",
+                form_name_placeholder: "Nome",
+                form_email_placeholder: "E-mail",
+                form_message_placeholder: "Mensagem",
+                form_submit_btn: "Enviar Mensagem",
                 footer_rights: "Todos os direitos reservados.",
                 footer_dev: "Desenvolvido com ❤️ por Vinícius.",
                 typewriter_phrases: ["o Futuro.", "Inteligência.", "Soluções.", "Crescimento."]
@@ -381,7 +451,11 @@
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
                 if (translations[lang][key]) {
-                    el.innerText = translations[lang][key];
+                    if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                        el.placeholder = translations[lang][key];
+                    } else {
+                        el.innerText = translations[lang][key];
+                    }
                 }
             });
 
