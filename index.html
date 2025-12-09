@@ -14,8 +14,8 @@
         :root {
             --bg-color: #0f172a;
             --text-color: #e2e8f0;
-            --primary-color: #3b82f6; /* Tech Blue */
-            --accent-color: #8b5cf6; /* AI Purple */
+            --primary-color: #3b82f6;
+            --accent-color: #8b5cf6; /* AI  */
             --glass-bg: rgba(30, 41, 59, 0.7);
             --glass-border: rgba(255, 255, 255, 0.1);
         }
@@ -35,7 +35,6 @@
             scroll-behavior: smooth;
         }
 
-        /* --- Utilities --- */
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -45,7 +44,7 @@
         a { text-decoration: none; color: inherit; transition: 0.3s; }
         button { cursor: pointer; border: none; background: none; color: inherit; font-family: inherit; }
 
-        /* --- Header --- */
+
         header {
             padding: 15px 0;
             position: fixed;
@@ -113,7 +112,7 @@
             transform: translateY(-2px);
         }
 
-        /* Language Switcher */
+
         .lang-switch {
             font-size: 0.85rem;
             border: 1px solid var(--glass-border);
@@ -125,7 +124,6 @@
         .lang-switch button.active { opacity: 1; color: var(--primary-color); }
         .lang-switch span { opacity: 0.3; margin: 0 5px; }
 
-        /* --- Hero Section --- */
         .hero {
             height: 100vh;
             display: flex;
@@ -133,10 +131,9 @@
             justify-content: center;
             text-align: center;
             position: relative;
-            padding-top: 80px; /* Offset for fixed header */
+            padding-top: 80px; 
         }
 
-        /* Background Glow */
         .hero::before, .hero::after {
             content: '';
             position: absolute;
@@ -177,7 +174,6 @@
             box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
         }
 
-        /* Typewriter Cursor */
         .typewriter-text {
             border-right: 2px solid var(--primary-color);
             padding-right: 5px;
@@ -186,7 +182,6 @@
         }
         @keyframes blink { 50% { border-color: transparent } }
 
-        /* --- Services Section --- */
         .services { padding: 100px 0; }
         
         .section-title { text-align: center; margin-bottom: 60px; }
@@ -211,7 +206,6 @@
         .card p { color: #94a3b8; font-size: 0.95rem; }
         .icon { font-size: 2rem; margin-bottom: 20px; display: block; }
 
-        /* --- Contact Form --- */
         .contact-form {
             max-width: 500px;
             margin: 0 auto 40px;
@@ -245,7 +239,7 @@
             background: var(--accent-color);
         }
 
-        /* --- Footer --- */
+
         footer {
             padding: 50px 0;
             border-top: 1px solid var(--glass-border);
@@ -256,7 +250,6 @@
         .socials { margin-bottom: 20px; }
         .socials a { margin: 0 10px; font-size: 1.2rem; }
 
-        /* --- Mobile --- */
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.5rem; }
             .nav-links { display: none; } 
@@ -370,7 +363,6 @@
     </footer>
 
     <script>
-        // --- Translations Data ---
         const translations = {
             en: {
                 nav_services: "Services",
@@ -382,7 +374,6 @@
                 services_title: "Our Expertise",
                 services_subtitle: "Bridging the gap between complex code and real-world growth.",
                 card1_title: "Custom Development",
-                // Removed .NET and Flutter references
                 card1_desc: "Robust software solutions tailored to your needs. From enterprise systems to cross-platform mobile applications.",
                 card2_title: "Artificial Intelligence",
                 card2_desc: "Integrating AI to automate workflows, analyze data, and give your business a competitive edge.",
@@ -411,7 +402,6 @@
                 services_title: "Nossa Expertise",
                 services_subtitle: "Conectando código complexo ao crescimento real do negócio.",
                 card1_title: "Desenvolvimento Sob Medida",
-                // Removed .NET and Flutter references
                 card1_desc: "Soluções de software robustas. De sistemas empresariais a aplicativos móveis multiplataforma.",
                 card2_title: "Inteligência Artificial",
                 card2_desc: "Integrando IA para automatizar fluxos de trabalho, analisar dados e dar vantagem competitiva ao seu negócio.",
@@ -432,24 +422,20 @@
             }
         };
 
-        // --- State Management ---
         let currentLang = 'en';
         const textElement = document.getElementById('typewriter');
         let phraseIndex = 0;
         let charIndex = 0;
         let isDeleting = false;
-        let typeTimeout; // To control the loop
+        let typeTimeout;
 
-        // --- Functions ---
 
         function setLanguage(lang) {
             currentLang = lang;
             
-            // Update Buttons
             document.getElementById('btn-en').classList.toggle('active', lang === 'en');
             document.getElementById('btn-pt').classList.toggle('active', lang === 'pt');
 
-            // Update Static Text
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
                 if (translations[lang][key]) {
@@ -461,7 +447,6 @@
                 }
             });
 
-            // Reset Typewriter immediately for new language
             clearTimeout(typeTimeout);
             phraseIndex = 0;
             charIndex = 0;
@@ -471,7 +456,6 @@
         }
 
         function type() {
-            // Get current language phrases
             const phrases = translations[currentLang].typewriter_phrases;
             const currentPhrase = phrases[phraseIndex];
             
@@ -487,7 +471,7 @@
 
             if (!isDeleting && charIndex === currentPhrase.length) {
                 isDeleting = true;
-                typeSpeed = 2000; // Pause at end of word
+                typeSpeed = 2000;
             } else if (isDeleting && charIndex === 0) {
                 isDeleting = false;
                 phraseIndex = (phraseIndex + 1) % phrases.length;
@@ -497,9 +481,7 @@
             typeTimeout = setTimeout(type, typeSpeed);
         }
 
-        // --- Initialization ---
         document.addEventListener('DOMContentLoaded', () => {
-            // Detect browser language
             const userLang = navigator.language || navigator.userLanguage; 
             const defaultLang = userLang.startsWith('pt') ? 'pt' : 'en';
             
