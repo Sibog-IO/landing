@@ -190,6 +190,46 @@
         .socials { margin-bottom: 20px; }
         .socials a { margin: 0 10px; font-size: 1.2rem; }
 
+        /* --- Added Styles --- */
+        .logo img {
+            height: 40px;
+            width: auto;
+            display: block;
+        }
+
+        .contact-form {
+            max-width: 500px;
+            margin: 0 auto 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            text-align: left;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--glass-border);
+            border-radius: 8px;
+            color: var(--text-color);
+            font-family: inherit;
+            resize: vertical;
+        }
+        .contact-form input:focus, .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+        .contact-form button {
+            background: var(--primary-color);
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        .contact-form button:hover {
+            background: var(--accent-color);
+        }
+
         /* --- Mobile --- */
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.5rem; }
@@ -202,7 +242,9 @@
     <header>
         <div class="container">
             <nav>
-                <div class="logo">Sibog.IO</div>
+                <div class="logo">
+                    <img src="images/logo.svg" alt="Sibog.IO">
+                </div>
                 <div class="nav-items">
                     <div class="nav-links">
                         <a href="#services" data-i18n="nav_services">Services</a>
@@ -258,10 +300,17 @@
 
     <footer id="contact">
         <div class="container">
+            <form action="mailto:ti.sibog.io@gmail.com" method="post" enctype="text/plain" class="contact-form">
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <textarea name="message" placeholder="Message" rows="4" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+
             <div class="socials">
-                <a href="#">LinkedIn</a>
-                <a href="#">Instagram</a>
-                <a href="#">GitHub</a>
+                <a href="https://www.linkedin.com/company/sibog-io/about/" target="_blank">LinkedIn</a>
+                <a href="https://www.instagram.com/sibog.io/" target="_blank">Instagram</a>
+                <a href="https://www.tiktok.com/@sibog.io" target="_blank">TikTok</a>
             </div>
             <p>&copy; 2025 Sibog.IO. <span data-i18n="footer_rights">All rights reserved.</span></p>
             <p><span data-i18n="footer_dev">Developed with ❤️ by Vinícius.</span></p>
