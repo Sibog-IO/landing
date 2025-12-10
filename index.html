@@ -341,7 +341,10 @@
                 <p data-i18n="contact_subtitle">Have a project in mind? Let's build it together.</p>
             </div>
             
-            <form action="mailto:ti.sibog.io@gmail.com" method="post" enctype="text/plain" class="contact-form">
+            <form action="https://formsubmit.co/ti.sibog.io@gmail.com" method="POST" class="contact-form">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://sibog-io.github.io/">
+                <input type="hidden" name="_subject" value="New submission from Sibog.IO">
                 <input type="text" name="name" placeholder="Name" data-i18n="form_name_placeholder" required>
                 <input type="email" name="email" placeholder="Email" data-i18n="form_email_placeholder" required>
                 <textarea name="message" placeholder="Message" rows="4" data-i18n="form_message_placeholder" required></textarea>
