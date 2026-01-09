@@ -268,7 +268,7 @@
                 <div class="nav-items">
                     <div class="nav-links">
                         <a href="#services" data-i18n="nav_services">Services</a>
-                        <a href="#mission" data-i18n="nav_mission">Mission</a>
+                        <a href="#mission" data-i18n="nav_about">About Us</a>
                         <a href="#contact" data-i18n="nav_contact">Contact</a>
                     </div>
                     <div class="lang-switch">
@@ -298,21 +298,33 @@
             
             <div class="grid">
                 <div class="card">
+                    <span class="icon">📱</span>
+                    <h3 data-i18n="service_mobile_title">Mobile App Development</h3>
+                    <p data-i18n="service_mobile_desc">Transforming your business into a seamless mobile experience. We build intuitive, high-performance apps that engage users and extend your reach to every pocket.</p>
+                    <div style="margin-top: 15px; display: flex; gap: 15px; opacity: 0.7; justify-content: center;">
+                        <!-- Apple Logo -->
+                        <svg viewBox="0 0 384 512" style="height: 24px; fill: currentColor;"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+                        <!-- Android Logo -->
+                        <svg viewBox="0 0 576 512" style="height: 24px; fill: currentColor;"><path d="M420.55,301.93a24,24,0,1,1,24-24,24,24,0,0,1-24,24m-265.1,0a24,24,0,1,1,24-24,24,24,0,0,1-24,24m273.7-144.48,47.94-83a10,10,0,1,0-17.36-10L411.7,148a215.39,215.39,0,0,0-247.4,0L116.27,64.45a10,10,0,1,0-17.36,10l47.94,83C64.53,202.22,8.24,285.55,0,384H576c-8.24-98.45-64.54-181.78-146.85-226.55"/></svg>
+                    </div>
+                </div>
+
+                <div class="card">
                     <span class="icon">💻</span>
-                    <h3 data-i18n="card1_title">Custom Development</h3>
-                    <p data-i18n="card1_desc">Robust software solutions tailored to your needs. From enterprise systems to cross-platform mobile applications.</p>
+                    <h3 data-i18n="service_systems_title">Systems Development</h3>
+                    <p data-i18n="service_systems_desc">The digital backbone of your operation. We engineer bespoke systems that streamline complex processes, turning operational challenges into competitive advantages.</p>
                 </div>
 
                 <div class="card">
-                    <span class="icon">🤖</span>
-                    <h3 data-i18n="card2_title">Artificial Intelligence</h3>
-                    <p data-i18n="card2_desc">Integrating AI to automate workflows, analyze data, and give your business a competitive edge.</p>
+                    <span class="icon">⚙️</span>
+                    <h3 data-i18n="service_auto_title">Automation & Tools</h3>
+                    <p data-i18n="service_auto_desc">Reclaim your most valuable asset: time. We deploy intelligent bots and custom tools to handle repetitive tasks, allowing your team to focus on strategic growth.</p>
                 </div>
 
                 <div class="card">
-                    <span class="icon">🚀</span>
-                    <h3 data-i18n="card3_title">Digital Strategy</h3>
-                    <p data-i18n="card3_desc">Our mission is to apply our technical experience to ensure your technology drives actual business revenue.</p>
+                    <span class="icon">☁️</span>
+                    <h3 data-i18n="service_cloud_title">Cloud & Infrastructure</h3>
+                    <p data-i18n="service_cloud_desc">Reliable, secure, and built for growth. We architect robust cloud environments that ensure your business stays online and performs at its peak.</p>
                 </div>
             </div>
         </div>
@@ -321,14 +333,14 @@
     <section id="mission" class="services">
         <div class="container">
             <div class="section-title">
-                <h2 data-i18n="mission_title">Our Mission</h2>
-                <p data-i18n="mission_subtitle">Driven by purpose, defined by results.</p>
+                <h2 data-i18n="about_title">About Us</h2>
+                <p data-i18n="about_subtitle">Excellence in every line of code.</p>
             </div>
             
             <div class="card" style="text-align: center; max-width: 900px; margin: 0 auto; background: linear-gradient(145deg, rgba(30, 41, 59, 0.7), rgba(15, 23, 42, 0.9));">
                 <span class="icon" style="font-size: 3rem;">🎯</span>
-                <p data-i18n="mission_text" style="font-size: 1.2rem; line-height: 1.8; color: #e2e8f0;">
-                    To democratize access to high-end software engineering and artificial intelligence. We believe that scalable technology shouldn't be a luxury, but a standard for businesses aiming to lead their markets.
+                <p data-i18n="about_text" style="font-size: 1.2rem; line-height: 1.8; color: #e2e8f0;">
+                    With over 7 years of experience delivering high-end solutions across varied markets, we leverage cutting-edge technology to transform businesses. Our focus is on precision, scalability, and delivering premium software engineering that drives real results.
                 </p>
             </div>
         </div>
@@ -369,22 +381,30 @@
         const translations = {
             en: {
                 nav_services: "Services",
-                nav_mission: "Mission",
+                nav_about: "About Us",
                 nav_contact: "Contact",
                 hero_title: "We Build",
                 hero_subtitle: "Maximizing your business results through scalable Technology and Artificial Intelligence.",
                 cta_button: "Let's Talk",
                 services_title: "Our Expertise",
                 services_subtitle: "Bridging the gap between complex code and real-world growth.",
-                card1_title: "Custom Development",
-                card1_desc: "Robust software solutions tailored to your needs. From enterprise systems to cross-platform mobile applications.",
-                card2_title: "Artificial Intelligence",
-                card2_desc: "Integrating AI to automate workflows, analyze data, and give your business a competitive edge.",
-                card3_title: "Digital Strategy",
-                card3_desc: "Our mission is to apply our technical experience to ensure your technology drives actual business revenue.",
-                mission_title: "Our Mission",
-                mission_subtitle: "Driven by purpose, defined by results.",
-                mission_text: "To democratize access to high-end software engineering and artificial intelligence. We believe that scalable technology shouldn't be a luxury, but a standard for businesses aiming to lead their markets.",
+                
+                service_mobile_title: "Mobile App Development",
+                service_mobile_desc: "Transforming your business into a seamless mobile experience. We build intuitive, high-performance apps that engage users and extend your reach to every pocket.",
+                
+                service_systems_title: "Systems Development",
+                service_systems_desc: "The digital backbone of your operation. We engineer bespoke systems that streamline complex processes, turning operational challenges into competitive advantages.",
+                
+                service_auto_title: "Automation & Tools",
+                service_auto_desc: "Reclaim your most valuable asset: time. We deploy intelligent bots and custom tools to handle repetitive tasks, allowing your team to focus on strategic growth.",
+                
+                service_cloud_title: "Cloud & Infrastructure",
+                service_cloud_desc: "Reliable, secure, and built for growth. We architect robust cloud environments that ensure your business stays online and performs at its peak.",
+
+                about_title: "About Us",
+                about_subtitle: "Excellence in every line of code.",
+                about_text: "With over 7 years of experience delivering high-end solutions across varied markets, we leverage cutting-edge technology to transform businesses. Our focus is on precision, scalability, and delivering premium software engineering that drives real results.",
+                
                 contact_title: "Get in Touch",
                 contact_subtitle: "Have a project in mind? Let's build it together.",
                 form_name_placeholder: "Name",
@@ -397,22 +417,30 @@
             },
             pt: {
                 nav_services: "Serviços",
-                nav_mission: "Missão",
+                nav_about: "Sobre Nós",
                 nav_contact: "Contato",
                 hero_title: "Nós Criamos",
                 hero_subtitle: "Maximizando os resultados do seu negócio através de Tecnologia escalável e Inteligência Artificial.",
                 cta_button: "Vamos Conversar",
                 services_title: "Nossa Expertise",
                 services_subtitle: "Conectando código complexo ao crescimento real do negócio.",
-                card1_title: "Desenvolvimento Sob Medida",
-                card1_desc: "Soluções de software robustas. De sistemas empresariais a aplicativos móveis multiplataforma.",
-                card2_title: "Inteligência Artificial",
-                card2_desc: "Integrando IA para automatizar fluxos de trabalho, analisar dados e dar vantagem competitiva ao seu negócio.",
-                card3_title: "Estratégia Digital",
-                card3_desc: "Nossa missão é aplicar experiência técnica para garantir que a tecnologia gere receita real.",
-                mission_title: "Nossa Missão",
-                mission_subtitle: "Movidos por propósito, definidos por resultados.",
-                mission_text: "Democratizar o acesso à engenharia de software de alto nível e inteligência artificial. Acreditamos que tecnologia escalável não deve ser um luxo, mas um padrão para empresas que almejam liderar seus mercados.",
+                
+                service_mobile_title: "Desenvolvimento de Apps",
+                service_mobile_desc: "Transformando seu negócio em uma experiência móvel fluida. Criamos aplicativos intuitivos e de alta performance que engajam usuários e expandem seu alcance.",
+                
+                service_systems_title: "Desenvolvimento de Sistemas",
+                service_systems_desc: "A espinha dorsal digital da sua operação. Projetamos sistemas sob medida que simplificam processos complexos, transformando desafios operacionais em vantagens competitivas.",
+                
+                service_auto_title: "Automação e Ferramentas",
+                service_auto_desc: "Recupere seu ativo mais valioso: tempo. Implementamos robôs inteligentes e ferramentas personalizadas para lidar com tarefas repetitivas, permitindo que sua equipe foque no crescimento estratégico.",
+                
+                service_cloud_title: "Nuvem e Infraestrutura",
+                service_cloud_desc: "Seguro, estável e feito para crescer. Arquitetamos ambientes em nuvem robustos que garantem sua operação online e em alta performance.",
+
+                about_title: "Sobre Nós",
+                about_subtitle: "Excelência em cada linha de código.",
+                about_text: "Com mais de 7 anos de experiência entregando soluções de alto nível em diversos mercados, utilizamos tecnologia de ponta para transformar negócios. Nosso foco é na precisão, escalabilidade e em entregar engenharia de software premium que gera resultados reais.",
+
                 contact_title: "Entre em Contato",
                 contact_subtitle: "Tem um projeto em mente? Vamos construí-lo juntos.",
                 form_name_placeholder: "Nome",
