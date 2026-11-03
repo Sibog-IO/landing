@@ -3,36 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#19151F">
+    <link rel="icon" href="images/sibog-mark-purple-green.svg" type="image/svg+xml">
     <meta name="description" content="Política de Privacidade da Sibog, com informações sobre o tratamento de dados pessoais e os direitos previstos na LGPD.">
     <meta name="robots" content="index,follow">
     <title>Política de Privacidade | Sibog</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        :root { --bg: #0f172a; --text: #e2e8f0; --primary: #3b82f6; --muted: #a8b6ca; --panel: rgba(30,41,59,.72); --border: rgba(255,255,255,.1); }
+        :root { --bg: #19151F; --text: #F3EDF3; --primary: #B596FF; --green: #C7E16A; --muted: #B9B0C0; --panel: #27212F; --border: #43394C; }
         * { box-sizing: border-box; }
         html { scroll-behavior: smooth; }
-        body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.75 'Inter', sans-serif; }
-        a { color: #93c5fd; text-underline-offset: 3px; }
-        a:hover { color: #c4b5fd; }
-        header { border-bottom: 1px solid var(--border); background: rgba(15,23,42,.92); }
+        body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.75 Manrope, sans-serif; }
+        a { color: #C3AAFF; text-underline-offset: 3px; }
+        a:hover { color: var(--green); }
+        header { border-bottom: 1px solid var(--border); background: rgba(25,21,31,.94); backdrop-filter: blur(14px); }
         .topbar, main, footer { width: min(920px, calc(100% - 40px)); margin: 0 auto; }
         .topbar { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
         .brand { display: inline-flex; align-items: center; gap: 10px; color: var(--text); text-decoration: none; }
         .brand-mark { width: 36px; height: 36px; }
-        .brand-wordmark { width: 96px; height: 44px; object-fit: contain; }
+        .brand-wordmark { color: var(--text); font: 600 1.2rem/1 Sora, sans-serif; letter-spacing: -.06em; }
         .top-actions { display: flex; align-items: center; gap: 18px; }
         .back, .language-switch { font-size: .92rem; }
         .language-switch a { color: var(--muted); text-decoration: none; padding: 6px 9px; border: 1px solid var(--border); border-radius: 18px; }
         .language-switch a[aria-current="page"] { color: var(--text); border-color: var(--primary); }
         main { padding: 64px 0 80px; }
-        .eyebrow { color: #93c5fd; font-weight: 600; font-size: .85rem; letter-spacing: .08em; text-transform: uppercase; }
-        h1 { margin: 8px 0 10px; font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.15; letter-spacing: -.04em; }
+        .eyebrow { color: var(--primary); font: 500 .75rem/1.4 "JetBrains Mono", monospace; letter-spacing: .08em; text-transform: uppercase; }
+        h1 { margin: 8px 0 10px; font: 600 clamp(2rem, 5vw, 3.2rem)/1.15 Sora, sans-serif; letter-spacing: -.04em; }
         .updated { color: var(--muted); margin: 0 0 34px; }
         .intro, section { background: var(--panel); border: 1px solid var(--border); border-radius: 14px; padding: 24px 28px; margin: 18px 0; }
-        .intro { border-left: 3px solid var(--primary); }
-        h2 { font-size: 1.25rem; margin: 0 0 10px; }
+        .intro { border-left: 3px solid var(--green); }
+        h2 { font: 600 1.25rem/1.3 Sora, sans-serif; margin: 0 0 10px; }
         p { margin: 0 0 12px; }
         p:last-child { margin-bottom: 0; }
         ul { margin: 8px 0 0; padding-left: 22px; }
@@ -45,8 +47,8 @@
     <header>
         <div class="topbar">
             <a class="brand" href="index.html" aria-label="Sibog — página inicial">
-                <img class="brand-mark" src="images/logo-mark-white.svg" alt="">
-                <img class="brand-wordmark" src="images/sibog-wordmark-white.svg" alt="Sibog">
+                <img class="brand-mark" src="images/sibog-mark-purple-green.svg" alt="">
+                <span class="brand-wordmark">sibog</span>
             </a>
             <div class="top-actions">
                 <nav class="language-switch" aria-label="Idioma da política">

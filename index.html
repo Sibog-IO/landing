@@ -3,25 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#0B1524">
+    <meta name="theme-color" content="#19151F">
     <meta name="description" content="Sibog develops software, agentic systems and workflows, and adapts AI models to real-world operations.">
     <title>Sibog</title>
-    <link rel="icon" href="images/sibog-mark-duotone.svg" type="image/svg+xml">
+    <link rel="icon" href="images/sibog-mark-purple-green.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
             color-scheme: dark;
-            --navy: #0B1524;
-            --steel: #396A9A;
-            --cyan: #65D9DF;
-            --paper: #0B1524;
-            --white: #142537;
-            --soft: #243849;
-            --line: #304658;
-            --muted: #B7C5CE;
-            --ink: #F5F6F3;
+            --navy: #19151F;
+            --steel: #B596FF;
+            --cyan: #C7E16A;
+            --paper: #19151F;
+            --white: #27212F;
+            --soft: #30293A;
+            --line: #43394C;
+            --muted: #B9B0C0;
+            --ink: #F3EDF3;
+            --violet: #9B6CFF;
+            --lime: #C7E16A;
             --content: 1160px;
         }
 
@@ -31,10 +33,12 @@
             margin: 0;
             background: var(--paper);
             color: var(--ink);
-            font: 16px/1.65 Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            font: 16px/1.65 Manrope, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
             -webkit-font-smoothing: antialiased;
         }
         img { max-width: 100%; display: block; }
+        h1, h2, h3 { font-family: Sora, Manrope, sans-serif; }
+        .eyebrow, .service-number, .ai-capability span, .art-label, .art-index { font-family: "JetBrains Mono", monospace; }
         a { color: inherit; text-decoration: none; }
         button, input, select, textarea { font: inherit; }
         button, a { -webkit-tap-highlight-color: transparent; }
@@ -45,8 +49,9 @@
         .wrap { width: min(var(--content), calc(100% - 48px)); margin-inline: auto; }
         .eyebrow {
             margin: 0;
-            color: var(--cyan);
-            font-size: .76rem;
+            color: var(--steel);
+            font-family: "JetBrains Mono", monospace;
+            font-size: .72rem;
             font-weight: 700;
             letter-spacing: .11em;
             line-height: 1.4;
@@ -65,7 +70,7 @@
             z-index: 10;
             top: 0;
             border-bottom: 1px solid var(--line);
-            background: rgba(11, 21, 36, .94);
+            background: rgba(25, 21, 31, .94);
             backdrop-filter: blur(14px);
         }
         .nav {
@@ -77,7 +82,7 @@
         }
         .brand-lockup { display: inline-flex; align-items: center; gap: 10px; flex: none; }
         .brand-mark { width: 36px; height: 36px; }
-        .brand-wordmark { width: 96px; height: 44px; object-fit: contain; }
+        .brand-wordmark { color: var(--ink); font-family: Sora, sans-serif; font-size: 1.2rem; font-weight: 600; letter-spacing: -.06em; line-height: 1; }
         .nav-right, .nav-links, .language { display: flex; align-items: center; }
         .nav-right { gap: 28px; }
         .nav-links { gap: clamp(18px, 3vw, 36px); }
@@ -93,8 +98,8 @@
         .language span { color: #9AAAB3; font-size: .8rem; }
         .nav-cta {
             padding: 10px 16px;
-            border: 1px solid var(--navy);
-            border-radius: 4px;
+            border: 1px solid var(--cyan);
+            border-radius: 6px;
             background: var(--cyan);
             color: var(--navy);
             font-size: .86rem;
@@ -136,7 +141,7 @@
             gap: 10px;
             padding: 12px 18px;
             border: 1px solid var(--cyan);
-            border-radius: 4px;
+            border-radius: 8px;
             font-size: .92rem;
             font-weight: 700;
             transition: transform .18s ease, background .18s ease, color .18s ease;
@@ -145,7 +150,7 @@
         .button-secondary { background: transparent; color: var(--ink); border-color: var(--line); }
         .button-primary:hover, .button-secondary:hover { transform: translateY(-2px); }
         .button-secondary:hover { background: var(--soft); }
-        .button-primary:hover { background: #8BE7EB; border-color: #8BE7EB; }
+        .button-primary:hover { background: #D6EA8B; border-color: #D6EA8B; }
         .button-arrow { font-size: 1.15rem; line-height: 1; }
         .hero-art {
             min-height: 380px;
@@ -157,8 +162,8 @@
             background: var(--white);
         }
         .hero-art::before, .hero-art::after { content: ""; position: absolute; pointer-events: none; }
-        .hero-art::before { inset: 18px; border: 1px solid rgba(101, 217, 223, .16); }
-        .hero-art::after { left: 50%; top: 18px; bottom: 18px; border-left: 1px solid rgba(101, 217, 223, .1); }
+        .hero-art::before { inset: 18px; border: 1px solid rgba(199, 225, 106, .17); }
+        .hero-art::after { left: 50%; top: 18px; bottom: 18px; border-left: 1px solid rgba(181, 150, 255, .17); }
         .hero-art img { position: relative; z-index: 1; width: min(62%, 260px); height: auto; }
         .art-label { position: absolute; z-index: 2; left: 30px; bottom: 27px; color: var(--muted); font-size: .72rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; }
         .art-index { position: absolute; z-index: 2; right: 30px; top: 28px; color: var(--steel); font-size: .7rem; font-weight: 700; letter-spacing: .08em; }
@@ -172,7 +177,7 @@
             padding: clamp(24px, 4vw, 42px);
             border-right: 1px solid var(--line);
             border-bottom: 1px solid var(--line);
-            background: rgba(20,37,55,.5);
+            background: rgba(39,33,47,.78);
             transition: background .2s ease;
         }
         .service-card:hover { background: var(--soft); }
@@ -208,7 +213,7 @@
             min-height: 48px;
             padding: 12px 14px;
             border: 1px solid var(--line);
-            border-radius: 8px;
+            border-radius: 10px;
             background: var(--white);
             color: var(--ink);
         }
@@ -257,7 +262,7 @@
             .wrap { width: min(var(--content), calc(100% - 36px)); }
             .nav { min-height: 68px; }
             .brand-mark { width: 31px; height: 31px; }
-            .brand-wordmark { width: 82px; height: 38px; }
+            .brand-wordmark { font-size: 1.08rem; }
             .nav-right { gap: 13px; }
             .nav-links { display: none; }
             .nav-cta { display: none; }
@@ -318,8 +323,8 @@
     <header class="site-header">
         <div class="wrap nav">
             <a class="brand-lockup" href="#top" aria-label="Sibog home">
-                <img class="brand-mark" src="images/logo-mark-white.svg" alt="">
-                <img class="brand-wordmark" src="images/sibog-wordmark-white.svg" alt="Sibog">
+                <img class="brand-mark" src="images/sibog-mark-purple-green.svg" alt="">
+                <span class="brand-wordmark">sibog</span>
             </a>
             <div class="nav-right">
                 <nav class="nav-links" aria-label="Main navigation">
@@ -358,7 +363,7 @@
                     </div>
                 </div>
                 <div class="hero-art" aria-label="Sibog geometric mark">
-                    <img src="images/logo-mark-gradient.svg" alt="Sibog geometric S mark">
+                    <img src="images/sibog-mark-purple-green.svg" alt="Sibog geometric S mark">
                 </div>
             </div>
         </section>
@@ -478,8 +483,8 @@
         <div class="wrap">
             <div class="footer-top">
                 <a class="brand-lockup" href="#top" aria-label="Sibog home">
-                    <img class="brand-mark" src="images/logo-mark-white.svg" alt="">
-                    <img class="brand-wordmark" src="images/sibog-wordmark-white.svg" alt="Sibog">
+                    <img class="brand-mark" src="images/sibog-mark-purple-green.svg" alt="">
+                    <span class="brand-wordmark">sibog</span>
                 </a>
                 <nav class="footer-socials" aria-label="Social links">
                     <a href="https://www.linkedin.com/company/sibog-io/about/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
