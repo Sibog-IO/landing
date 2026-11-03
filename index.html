@@ -212,6 +212,20 @@
             background: var(--white);
             color: var(--ink);
         }
+        .field select {
+            appearance: none;
+            -webkit-appearance: none;
+            padding-right: 42px;
+            background-image:
+                linear-gradient(45deg, transparent 50%, var(--muted) 50%),
+                linear-gradient(135deg, var(--muted) 50%, transparent 50%);
+            background-position:
+                calc(100% - 19px) 21px,
+                calc(100% - 14px) 21px;
+            background-size: 5px 5px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
         .field textarea { min-height: 130px; resize: vertical; }
         .field input::placeholder, .field select:invalid, .field textarea::placeholder { color: var(--muted); }
         .contact-form button { justify-self: start; border: 0; cursor: pointer; }
@@ -344,7 +358,7 @@
                     </div>
                 </div>
                 <div class="hero-art" aria-label="Sibog geometric mark">
-                    <img src="images/sibog-mark-duotone.svg" alt="Sibog geometric S mark">
+                    <img src="images/logo-mark-gradient.svg" alt="Sibog geometric S mark">
                 </div>
             </div>
         </section>
